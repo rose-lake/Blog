@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+    <!-- start th:fragment="navbar" -->
+    <div th:fragment="navbar">
+        <!-- all of this nav bar code is from the bootstrap web site -->
+        <!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> -->
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+
+            <a class="navbar-brand" href="/author">RoseLake</a>  <!-- add a href that takes user to a ME landing page -->
+            <!-- How to include a Brand Image, for future reference -->
+            <!-- <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#">
+                    <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+                </a>
+            </nav> -->
+
+            <!-- toggler feature :: not using this!... -->
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"> <!-- note: took out the class "active" -->
+                        <a class="nav-link" href="/home">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/blogs" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Blogs
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/javabasics">Java Basics</a>
+                            <a class="dropdown-item" href="/javaoo">Java OO</a>
+                            <a class="dropdown-item" href="/frontend">Front End</a>
+                            <a class="dropdown-item" href="/git">Git</a>
+                            <!--<div class="dropdown-divider"></div>-->
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">JBC Info</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/author">Authors</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <!-- end th:fragment="navbar" -->
+
+    <div th:fragment="footer">
+        <p class="footer">&copy 2019 Rose Lake</p>
+    </div>
+
+</body>
+</html>
