@@ -2,29 +2,30 @@ package com.roselake.jbc;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HomeController {
 
-    @GetMapping(value={"/", "/index", "/home"})
+    @GetMapping(value={"/"})
     public String home(){
         return "index";
     }
 
-    // presently this page does not ever load
-    @GetMapping("/blogs")
-    public String blogs(){
-        return "blogs";
+    @GetMapping("/basics")
+    public String basics(){
+        return "basics";
     }
 
-    @GetMapping("/javabasics")
-    public String javabasics(){
-        return "javabasics";
-    }
+    @GetMapping("/basics1")
+    public String basics1() {return "basics1"; }
 
-    @GetMapping("/javaoo")
-    public String javaoo(){
-        return "javaoo";
+    @GetMapping("/basics2")
+    public String basics2() {return "basics2"; }
+
+    @GetMapping("/oo")
+    public String oo(){
+        return "oo";
     }
 
     @GetMapping("/frontend")
