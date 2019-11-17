@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Arrays</title>
+    <title>String Objects</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
@@ -12,7 +12,58 @@
     <div th:replace="base::navbar"></div>
 
     <main role="main" class="container content">
-        <h4>All about arrays and arraylists, also multidimensional arrays</h4>
+
+        <!-- beginning of blog post -->
+        <div class="blog-post">
+
+            <h1>Java Basics</h1>
+
+            <h3>String Objects</h3>
+            <p>A String is an object, not a primitive data type. Yay, go String! As an object, String will have built-in behaviors.</p>
+
+            <h5>Declaration</h5>
+            <p>When you declare a string, you are creating an instance of the String class. Because strings are so heavily used, you're allowed to declare them in a similar syntax as we use with primitive data types. However, this is offered just as a convenience. What's really happening is we are declaring a new instance of the String type. Both declarations below are correct:</p>
+<pre><code>String hello = new String("Hello, World!");
+String helloAgain = "Hello again, World!";</code></pre>
+            <p>It is, however, "more correct" to use the full class-type declaration, this helps you remember what you're dealing with! ;)
+            </p>
+
+            <h5>String Constant Pool</h5>
+            <p>String is a Final Class. Once created it cannot be altered. It is immutable. The JVM creates a memory location especially for Strings called the String Constant Pool. That's why Strings can be initialized without the new keyword. A string reference can be overwritten but that does not delete the original content...
+<pre><code>String h1 = "hello";
+h1 = "this" + "world";</code></pre>
+            <p>In this example code, original reference link to the String "hello" is broken. That string is still hanging around in memory with no handle...!</p>
+            <p>Conversely, if you create the exact same string over and over, Java will only have one version of it with different references pointing to it...</p>
+<pre><code>String h1 = "hello";
+String h2 = "hello";
+String h3 = "hello";</code></pre>
+            <p>All three of these references point to the same string in the String Constant Pool.</p>
+
+            <h5>String as char[]</h5>
+            <p>A Java String is a sequence of single characters, it is basically a <code>char[]</code> array. You can declare a string from a character array, by passing the character array in to the String constructor. You can also convert a string back to its character array by using the <code>.toCharArray()</code> string method.
+            </p>
+
+            <h5>Escape Sequences</h5>
+            <p>Any time you wish to include any of these special characters, such as a 'tab' or a 'new line', you must use the escape sequence in order for it to be rendered properly by the String class.</p>
+            <ul>
+                <li>\t      tab</li>
+                <li>\b      backspace</li>
+                <li>\n      new line</li>
+                <li>\r      carriage return         Note: Windows uses \r\n for a new line.</li>
+                <li>\f      formfeed</li>
+                <li>\\      backslash</li>
+                <li>\"      double-quote</li>
+                <li>\'      single quote</li>
+            </ul>
+
+            <h5>Concatenating using +</h5>
+            <p>The infix + operator has clearly been overridden in multiple ways to be able to accomplish String concatenation and also easily accept and render ints or other types and convert them (probably using their toString() methods) for display within a System.out.println() statement.</p>
+            <h6>NOTE: Chars vs Strings</h6>
+            <p>Interesting that using the + operator on Characters does not String-wise concatenate them. It prints/returns a number. Even though printing each character by itself will print/return the character as a viewable letter.</p>
+
+        </div>
+        <!-- end of blog post -->
+
     </main>
 
     <div th:replace="base::footer"></div>

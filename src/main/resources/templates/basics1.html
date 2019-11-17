@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Primitive Types</title>
+    <title>Primitive Data Types</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
@@ -12,10 +12,32 @@
     <div th:replace="base::navbar"></div>
 
     <main role="main" class="container content">
-        <h4>Info on Primitive Types</h4>
+        <!-- beginning of blog post -->
+        <div class="blog-post">
+            <h1>Java Basics</h1>
+            <h3>Primitive Data Types</h3>
+            <p>These are data types that are built in to the Java system. For more on primitive data types see the <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">official tutorial</a>.</p>
+
+            <h5><code>int</code> and <code>long</code></h5>
+            <p>The <code>int</code> data type allows values between -2,147,483,648 (negative 2 to the 31st power) and 2,147,483,647 (positive 2 to the 31st power, minus 1) inclusive. In other words, I believe this means it is using 32-bit precision but reserving one bit for the sign. <code>long</code> is the 64-bit version of int.</p>
+
+            <h5><code>float</code> and <code>double</code></h5>
+            <p><code>float</code> is 32-bit while <code>double</code> is 64-bit. Typeically, double is the one you would use by default, but use float if you need to save memory in large arrays of floating point numbers. While these data types do have a limit on their range of values, it's not something we would typically encounter in daily usage! However, these should never be used for exact Decimal calculations, such as for currency or basic math! For this purpose, you would need to use the <code>java.math.BigDecimal</code> class.</p>
+
+            <h5><code>boolean</code></h5>
+            <p> The <code>boolean</code> data type can be <code>true</code> or <code>false</code>. Note that the true and false are not capitalized in Java! </p>
+
+            <h5><code>char</code></h5>
+            <ul>
+                <li>is surrounded by single quotes</li>
+                <li>can hold only a single character</li>
+            </ul>
+        </div>
+        <!-- end of blog post -->
     </main>
 
     <div th:replace="base::footer"></div>
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
