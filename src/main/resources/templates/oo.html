@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Object Oriented</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
@@ -12,7 +12,35 @@
     <div th:replace="base::navbar"></div>
 
     <main role="main" class="container content">
-        <h2>This will contain the blog posts relating to Object-Oriented Java topics</h2>
+
+        <!-- start blog header -->
+        <div class="blog-header">
+            <h1>Object Oriented Java</h1>
+        </div>
+        <!-- end blog-header -->
+
+        <!-- unordered list-group of the blog entries -->
+        <ul class="list-group mx-auto w-75">
+
+            <div class="list-group-item flex-column">
+                <div class="d-flex justify-content-between mini-header">
+                    <h5 class="mb-1"><a href="/oo1" class="title">Classes</a></h5>
+                    <small class="font-weight-light">November 11, 2019</small>
+                </div>
+                <p class="mb-1 justify-content-between"> Classes are the backbone of the Java programming language. Everything in Java is a class, or an object. It's all quite taking a leaf out of Plato's book, really! The classes themselves are like that "Platonic ideal", sitting out there as a blueprint for future use... [ <a href="oo1">read more</a> ]</p>
+            </div>
+
+            <div class="list-group-item flex-column">
+                <div class="d-flex justify-content-between mini-header">
+                    <h5 class="mb-1"><a href="/oo2" class="title">Inheritance</a></h5>
+                    <small class="font-weight-light">November 15, 2019</small>
+                </div>
+                <p class="mb-1 justify-content-between">If Classes are the "backbone" of the Java language as it were, then Inheritance (and Composition!) are what brings it all together, the "muscles and ligaments" helping all the components function seamlessly together. Inheritance and Composition are the reason... [ <a href="oo2">read more</a> ]</p>
+            </div>
+
+        </ul>
+
+
     </main>
 
     <div th:replace="base::footer"></div>

@@ -13,14 +13,20 @@
 
     <main role="main" class="container content">
 
-        <!-- beginning of blog post -->
-        <div class="blog-post">
-
-            <h1>Java Basics</h1>
-
-            <h3>String Objects</h3>
-            <p>A String is an object, not a primitive data type. Yay, go String! As an object, String will have built-in behaviors.</p>
-
+        <!-- start blog header -->
+        <div class="blog-header flex-column">
+            <div class="d-flex justify-content-between">
+                <div class="align-self-end">
+                    <a href="/author" class="title"><img src="img/authorlogo.jpg" alt="rose author logo" class="rounded-circle" width="30" height="30"><h6>Rose</h6></a>
+                </div>
+                <h1 class="align-self-end">String Objects</h1>
+                <small class="align-self-end">October 22, 2019</small>
+            </div>
+        </div>
+        <!-- end blog-header -->
+        <!-- start blog-post -->
+        <article class="blog-post flex-column mx-auto">
+            <p>A String is an object, not a primitive data type. Yay, go String! As an object, String will have lots of built-in behaviors for us to make use of.</p>
             <h5>Declaration</h5>
             <p>When you declare a string, you are creating an instance of the String class. Because strings are so heavily used, you're allowed to declare them in a similar syntax as we use with primitive data types. However, this is offered just as a convenience. What's really happening is we are declaring a new instance of the String type. Both declarations below are correct:</p>
 <pre><code>String hello = new String("Hello, World!");
@@ -58,10 +64,10 @@ String h3 = "hello";</code></pre>
 
             <h5>Concatenating using +</h5>
             <p>The infix + operator has clearly been overridden in multiple ways to be able to accomplish String concatenation and also easily accept and render ints or other types and convert them (probably using their toString() methods) for display within a System.out.println() statement.</p>
-            <h6>NOTE: Chars vs Strings</h6>
+            <h5>NOTE: Chars vs Strings</h5>
             <p>Interesting that using the + operator on Characters does not String-wise concatenate them. It prints/returns a number. Even though printing each character by itself will print/return the character as a viewable letter.</p>
 
-        </div>
+        </article>>
         <!-- end of blog post -->
 
     </main>

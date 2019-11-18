@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Classes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div th:replace="base::navbar"></div>
+
+<main role="main" class="container content">
+    <!-- start blog header -->
+    <div class="blog-header flex-column">
+        <div class="d-flex justify-content-between">
+            <div class="align-self-end">
+                <a href="/author" class="title"><img src="img/authorlogo.jpg" alt="rose author logo" class="rounded-circle" width="30" height="30"><h6>Rose</h6></a>
+            </div>
+            <h1 class="align-self-end">Classes</h1>
+            <small class="align-self-end">November 15, 2019</small>
+        </div>
+    </div>
+    <!-- end blog-header -->
+    <!-- start blog-post -->
+    <article class="blog-post flex-column mx-auto">
+        <p>Classes are the backbone of the Java programming language. Everything in Java is a class, or an object. It's all quite taking a leaf out of Plato's book, really! The classes themselves are like that "Platonic ideal", sitting out there as a blueprint for future use. That blueprint is then "instantiated" when you create a class object. This means you are taking that blueprint and making it real, "incarnating" it into "form", so to speak. This is a quite handy way to think about things, especially when it comes to abstract classes. Abstract classes exist only in the "ideal" realm, and are never incarnated. But, more on that later :-) What follows are some of the notes I took for myself on the Java syntax for defining these blueprints and instantiating them.</p>
+        <h5>Naming Conventions</h5>
+        <ul>
+            <li>Each file has one primary class named after that file (and written/coded inside it!). </li>
+            <li>Capitalize each word of the class name.</li>
+            <li>Name the file and the main class of that file the same exact name.</li>
+        </ul>
+        <h5>Constructors</h5>
+        <p>The constructor method is called by the name of the class. To invoke the constructor, declare a new variable of type Class and assign it to new Class(). To be clear, the first use of the word Class refers to the overarching class definition (outermost definition) and the second use of the word Class() refers to the constructor method. Cool. It's all coming back to me. ;) I love this stuff.</p>
+        <h5>Car example</h5>
+        <pre><code>public class Car {
+    // this is the class declaration
+    public Car() {
+        // this is the constructor method
+    }
+    public static void main(String[] args) {
+        /* every class must have a main() method...
+        or *must* it?...
+        yeah, cause it won't compile without one! */
+
+        Car ferrari = new Car();
+        // this creates an instance of Car and names it ferrari.
+        // we have called or invoked the constructor.
+    }
+}</code></pre>
+        <h5><code>main()</code> method</h5>
+        <p>This method runs when we execute the compiled *.class file.</p>
+        <p>The <code>static</code> keyword means it can be run without an instance of the class it's in being created.</p>
+        <p>This is the funny "hook" that Java has created to get around itself, as it were... Otherwise you'd be stuck in a situation where you're like : oh, everything's an object, but I can't use an object until I've created an object, where/how do I create an object if I have no object to operate inside of???... You get the circular logic idea ;-) So, the static keyword combined with the main() method convention are your "way in" to a piece of Java code.</p>
+        <h5>Properties</h5>
+        <p>To create properties or fields which you can access such as Car.color, add the desired property within the class declaration, but outside of the class constructor. Then, when the constructor is called with particular values for the property fields, you go ahead and assign them.</p>
+        <h5>Overloaded Constructor</h5>
+        <p><code>class Car</code> example with properties <code>.color</code>, <code>.isRunning</code>, and <code>.velocity</code></p>
+        <pre><code>public class Car {      // this is the class declaration
+    String color;       // this creates a new field which can be accessed as Car.color
+    boolean isRunning;
+    int velocity;
+
+    public Car(String carColor, boolean carRunning, int milesPerHour) {
+        color = carColor;
+        isRunning = carRunning;
+        velocity = milesPerHour;
+    }
+
+    public static void main(String[] args) {
+        Car ferrari = new Car("red", true, 65);
+        Car renault = new Car("blue", false, 70);
+    }
+}</code></pre>
+        <h5>Displaying a class</h5>
+        <p>Use <code>toString()</code> to display your class. When we define a <code>toString()</code> method for our class, we are defining what String will print out when we ask Java to print our object. Otherwise Java just prints the name of your object followed by a memory location. aka, "gobbledigook". ;-)</p>
+        <h5>Documentation Comments</h5>
+        <p>These are accessed and used by automatic documentation like man pages etc.</p>
+        <pre><code>/** This is a documentation comment */
+/** This is a
+  documentation
+  comment */
+/**
+This is a documentation comment.
+*/</code></pre>
+        <p>Javadoc will ignore extra stars and will assume you just wanted to make a pretty box around your comments. Therefore, the following would also be just a regular comment that says "This is a documentation comment."</p>
+        <pre><code>/************************************
+ * This is a documentation comment. *
+ ************************************/</code></pre>
+        <h5>Compiling</h5>
+        <p>To compile on the command line...</p>
+        <ul>
+            <li>When you compile a class, type javac ClassName.java</li>
+            <li>To run the compiled code, type java ClassName. Do not include the .class extension.</li>
+        </ul>
+
+    </article>
+    <!-- end of blog post -->
+</main>
+
+<div th:replace="base::footer"></div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,21 +1,39 @@
+/***************************/
+/* sticky footer code here */
 html, body {
     height: 100%;                       /* this is for the sticky footer */
 }
 
+.content {
+    flex: 1 0 auto;                     /* sticky footer */
+}
+body {
+    display: flex;                      /* sticky footer */
+    flex-direction: column;             /* sticky footer */
+
+    padding-top: 80px!important;        /* sticky nav-bar */
+}
+.footer {
+    flex-shrink: 0;                     /* sticky footer */
+    text-align: center;
+    margin-bottom: 1rem;                /* 1 rem = the size of the default root font, usually 16px */
+}
+/* end sticky footer code */
+/* sticky footer from https://css-tricks.com/couple-takes-sticky-footer/  --  Thank you !! */
+/*******************************************************************************************/
+
+/*****************************/
+/* General custom formatting */
 body {
     color: #222222;                     /* it's so MUCH better to have a slightly less BLACK black */
     text-align: center;                 /* I like my stuff centered! */
-
-    padding-top: 80px!important;        /* sticky nav-bar */
-
-    display: flex;                      /* sticky footer */
-    flex-direction: column;             /* sticky footer */
 }
-
+h1, h2, h3, h4, h5, h6 {                /* to give the headers more down-space margin */
+    margin-bottom: 1rem;
+}
 p {
-    text-align: left;
+    text-align: left;                   /* this has mostly worked out!... as counter-weight to body text-align:center */
 }
-
 pre {
     color: inherit;                     /* see if it will inherit the surrounding color */
     background-color: #ecf0f3;
@@ -25,7 +43,6 @@ pre {
     border-radius: 3px;
     margin-left: 10px;
 }
-
 code {
     color: inherit;                     /* see if it will inherit the surrounding color */
     background-color: #ecf0f3;
@@ -34,7 +51,6 @@ code {
     padding: 0 1px 1px;
     border-radius: 3px;
 }
-
 a:link {
     text-decoration: none;              /* don't underline links */
     color: #546dd3;
@@ -46,18 +62,71 @@ a:active {
     text-decoration: none;              /* don't underline links even when active */
 }
 
+/*************************************/
+/* code specific to blog pages  here */
 .blog-post {
     text-align:left;
+    width:95%;
 }
-
-.content {
-    flex: 1 0 auto;                     /* sticky footer */
+.blog-header {
+    color: #35387a;
+    margin-bottom: 2rem;
+    margin-left: 1.5rem;
 }
-
-.footer {
-    flex-shrink: 0;                     /* sticky footer */
-    text-align: center;
-    margin-bottom: 1rem;                /* 1 rem = the size of the default root font, usually 16px */
+.blog-header img {
+    margin-left: .25rem;
 }
+.blog-header h6 {
+    margin-bottom: .25rem;
+    margin-left: .25rem;
+}
+.blog-header h1 {
+    margin-bottom: .25rem;
+}
+.blog-header small {
+    margin-bottom: .5rem;
+}
+/* end blog-headers specific code */
+/**************************************/
 
-/* sticky footer from https://css-tricks.com/couple-takes-sticky-footer/  --  Thank you !! */
+/************************/
+/* list group code here */
+.mini-header {
+    color: #35387a;             /* for giving the same color-scheme as the blog-headers to the mini-headers in the list groups */
+}
+.list-group {
+    margin-bottom: 2rem;        /* giving it a bit of spacing from the copyright and/or other list group(s) if on index page */
+}
+/* end list-group specific code */
+/********************************/
+
+/*********************************************/
+/* modifying title text which is also a link */
+/* this is within the unordered lists of blog entries */
+/* this happens only inside the list-groups, but is a special use-case, so commenting it separately */
+a.title:link{
+    color: #35387a;             /* make these look identical to the other mini-header text and header texts */
+}
+a.title:visited {
+    color: #aa75d9;             /* it needs this for behavior to match */
+}
+a.title:hover {
+    color: #546dd3;             /* but when you hover over it, it will become the same color as any other unvisited link! */
+}
+a.title:visited:hover {
+    color: #aa75d9;             /* this is the original visited color, in effect this disables the fancy hover once visited */
+}
+/* a:active -- no change to above -- it will still not be underlined */
+/*********************************************/
+
+
+/******************************************/
+/* code relative to the author card, here */
+.card-title {
+    color: #35387a;
+}
+.card-subtitle{
+    color: #35387a;
+}
+/* end author-card specific code */
+/*********************************/

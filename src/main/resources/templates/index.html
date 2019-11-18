@@ -12,7 +12,81 @@
     <div th:replace="base::navbar"></div>
 
     <main role="main" class="container content">
-        <h1>Welcome to the Home Page</h1>
+
+
+        <!-- start blog header -->
+        <div class="blog-header">
+            <h1>Welcome to Rose's Coding Blog</h1>
+        </div>
+        <!-- end blog-header -->
+
+        <!-- unordered list-group of the blog entries :: Java Language Basics -->
+        <ul class="list-group mx-auto w-75">
+            <!-- extra box with section header : Java Language Basics -->
+            <div class="list-group-item flex-column">
+                <div class="d-flex justify-content-between mini-header">
+                    <h3 class="mb-1"><a href="/basics" class="title">Java Language Basics</a></h3>
+                </div>
+            </div>
+            <!-- blog entries -->
+            <div class="list-group-item flex-column">
+                <div class="d-flex justify-content-between mini-header">
+                    <h5 class="mb-1"><a href="/basics1" class="title">Primitive Data Types</a></h5>
+                    <small class="font-weight-light">October 15, 2019</small>
+                </div>
+                <p class="mb-1 justify-content-between"> Primitive data types are the data types that are built in to the Java system. Java is a strongly typed language. This means that every variable you declare in your code must have a specific "type" assigned to it. Sometimes this will be a primitive data type. Sometimes... [ <a href="/basics1">read more</a> ]</p>
+            </div>
+
+            <div class="list-group-item flex-column">
+                <div class="d-flex justify-content-between mini-header">
+                    <h5 class="mb-1"><a href="/basics2" class="title">String Objects</a></h5>
+                    <small class="font-weight-light">October 22, 2019</small>
+                </div>
+                <p class="mb-1 justify-content-between">A String is an object, not a primitive data type. Yay, go String! As an object, String will have lots of built-in behaviors for us to make use of. Declaration. When you declare a string, you are creating an instance of the String class. Because strings are so heavily used... [ <a href="/basics2">read more</a> ]</p>
+            </div>
+
+        </ul>
+        <!-- end Java Language Basics display block -->
+
+        <!-- unordered list-group of the blog entries :: Object Oriented Java -->
+        <ul class="list-group mx-auto w-75">
+            <!-- extra box with section header : Object Oriented Java -->
+            <div class="list-group-item flex-column">
+                <div class="d-flex justify-content-between mini-header">
+                    <h3 class="mb-1"><a href="/oo" class="title">Object Oriented Java</a></h3>
+                </div>
+            </div>
+            <!-- blog entries -->
+            <div class="list-group-item flex-column">
+                <div class="d-flex justify-content-between mini-header">
+                    <h5 class="mb-1"><a href="/oo1" class="title">Classes</a></h5>
+                    <small class="font-weight-light">November 11, 2019</small>
+                </div>
+                <p class="mb-1 justify-content-between"> Classes are the backbone of the Java programming language. Everything in Java is a class, or an object. It's all quite taking a leaf out of Plato's book, really! The classes themselves are like that "Platonic ideal", sitting out there as a blueprint for future use... [ <a href="/oo1">read more</a> ]</p>
+            </div>
+
+            <div class="list-group-item flex-column">
+                <div class="d-flex justify-content-between mini-header">
+                    <h5 class="mb-1"><a href="/oo2" class="title">Inheritance</a></h5>
+                    <small class="font-weight-light">November 15, 2019</small>
+                </div>
+                <p class="mb-1 justify-content-between">If Classes are the "backbone" of the Java language as it were, then Inheritance (and Composition!) are what brings it all together, the "muscles and ligaments" helping all the components function seamlessly together. Inheritance and Composition are the reason... [ <a href="/oo2">read more</a> ]</p>
+            </div>
+
+        </ul>
+        <!-- end Object Oriented Java display block-->
+
+        <!-- single block at the end for "Learn More..." :: GitBook JBC Notes! -->
+        <ul class="list-group mx-auto w-75">
+            <!-- extra box with section header : Java Language Basics -->
+            <div class="list-group-item flex-column">
+                <div class="d-flex justify-content-between mini-header">
+                    <h3 class="mb-1"><a href="https://kseniaroselake.gitbook.io/jbc-notes/" class="title">Learn More...</a></h3>
+                </div>
+            </div>
+        </ul>
+        <!-- end block for "Learn More..." link to GitBook -->
+
     </main>
 
     <div th:replace="base::footer"></div>

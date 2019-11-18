@@ -28,15 +28,11 @@ public class HomeController {
         return "oo";
     }
 
-    @GetMapping("/frontend")
-    public String frontend(){
-        return "frontend";
-    }
+    @GetMapping("/oo1")
+    public String oo1() { return "oo1"; }
 
-    @GetMapping("/git")
-    public String git(){
-        return "git";
-    }
+    @GetMapping("/oo2")
+    public String oo2() { return "oo2"; }
 
     @GetMapping("/about")
     public String about(){

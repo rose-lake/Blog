@@ -6,13 +6,39 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
 
     <div th:replace="base::navbar"></div>
 
     <main role="main" class="container content">
-        <h2>Information about Rose Lake here ;) </h2>
+
+        <div class="flex-column">
+            <div class="d-flex justify-content-between">
+            <div class="card mx-auto" style="width: 25rem;">
+                <div class="d-flex"><img class="card-img-top mx-auto align-self-center rounded-circle" style="width:20rem; height=20rem; margin-top:2rem;" src="img/authorlogo.jpg" alt="Author Card image"></div>
+                <div class="card-body">
+                    <h5 class="card-title">Ksenia Rose Lake</h5>
+                    <h6 class="card-subtitle mb-2 font-weight-light">Full Stack Java Software Developer</h6>
+                </div>
+                <div class="card-body"><p class="card-text">Ksenia studied Computer Engineering and graduated with a Mathematics degree. She was a software developer straight out of undergrad, working with an object-oriented content management system at The Motley Fool. After 15 years of teaching, she's come back to her roots and is enjoying the coding life once more...</p>
+                </div>
+                <div class="card-body">
+                    <a href="https://github.com/rose-lake?tab=repositories" class="card-link">
+                        <img src="img/GitHub-Mark-120px-plus.png" alt="GitHub Mark" width="30" height="30">
+                    </a>
+                    <a href="https://kseniaroselake.gitbook.io/jbc-notes/" class="card-link">
+                        <img src="img/gitbook.png" alt="GitBook logo" width="30" height="30">
+                    </a>
+                    <a href="https://www.linkedin.com/in/ksenia-rose-lake-09a00514a/" class="card-link">
+                        <img src="img/LI-In-Bug.png" alt="LinkedIn logo" width="30" height="30">
+                    </a>
+                </div>
+            </div>
+            </div>
+        </div>
+
     </main>
 
     <div th:replace="base::footer"></div>

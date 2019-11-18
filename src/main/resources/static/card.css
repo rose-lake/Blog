@@ -1,0 +1,166 @@
+/* everything below this line is taken from a lovely talk on GitHub at a Tech, Rebalanced event. Thank you! */
+.centered {
+    text-align: center;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.card {
+    width: 450px;
+    height: 250px;
+    background-color: #fff;
+    background: linear-gradient(#f8f8f8, #fff);
+    box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    margin: 1.5rem;
+}
+
+.user-image {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.icon {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card h1 {
+    text-align: center;
+}
+
+.card .additional {
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(#dE685E, #9b4841);
+    transition: width 0.4s;
+    overflow: hidden;
+    z-index: 2;
+}
+
+
+.card:hover .additional {
+    width: 100%;
+    border-radius: 0 5px 5px 0;
+}
+
+.card .additional .user-card {
+    width: 150px;
+    height: 100%;
+    position: relative;
+    float: left;
+}
+
+.card .additional .user-card::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10%;
+    right: -2px;
+    height: 80%;
+    border-left: 2px solid rgba(0,0,0,0.025);
+}
+
+.card .additional .more-info {
+    width: 300px;
+    float: left;
+    position: absolute;
+    left: 150px;
+    height: 100%;
+}
+
+.card .additional .more-info h1 {
+    color: #fff;
+    margin-bottom: 0;
+}
+
+
+
+.card .additional .coords {
+    margin: 0 1rem;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.card .additional .coords span + span {
+    float: right;
+}
+
+.card .additional .stats {
+    font-size: 2rem;
+    display: flex;
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+    right: 1rem;
+    top: auto;
+    color: #fff;
+}
+
+.card .additional .stats > div {
+    flex: 1;
+    text-align: center;
+}
+
+.card .additional .stats i {
+    display: block;
+}
+
+.card .general {
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 1rem;
+    padding-top: 0;
+}
+
+.card.green .additional .more-info h1 {
+    color: #fff;
+}
+
+.card.green .additional .coords {
+    color: #fff;
+}
+
+.card.green .additional .stats {
+    color: #fff;
+}
+
+.card.green .additional {
+    background: linear-gradient(#92bCa6, #668374);
+}
+
+.card.purple .additional .more-info h1 {
+    color: #fff;
+}
+
+.card.purple .additional .coords {
+    color: #fff;
+}
+
+.card.purple .additional .stats {
+    color: #fff;
+}
+
+.card.purple .additional {
+    background: linear-gradient(#a51a95, #731268);
+}
+
