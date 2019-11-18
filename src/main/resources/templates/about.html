@@ -6,13 +6,25 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="img/roselakerounded.png">
 </head>
 <body>
 
     <div th:replace="base::navbar"></div>
 
     <main role="main" class="container content">
-        <h2>Here there will be info ABOUT the JBC (Java Web Development Boot Camp) </h2>
+
+        <!-- beginning of blog post -->
+        <div class="blog-header flex-column mx-auto justify-content-between">
+            <h1 class="align-self-end">JBC</h1>
+        </div>
+        <!-- end blog-header -->
+        <!-- start blog post -->
+        <div class="blog-post flex-column mx-auto">
+            <p>This Java Boot Camp (JBC) is a web development boot camp sponsored by the Department of Labor and implemented by Montgomery College. It's an intensive eight-week course ranging in topics from core Java to HTML and CSS. Once a week, we complete an individual coding challenge from start to finish in seven hours. In our final week we will complete a group challenge in which we will design a fully dynamic web site, complete with our own back-end code and our own front-end wizardry.</p>
+        </div>
+        <!-- end of blog post -->
+
     </main>
 
     <div th:replace="base::footer"></div>

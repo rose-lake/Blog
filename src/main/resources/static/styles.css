@@ -3,7 +3,6 @@
 html, body {
     height: 100%;                       /* this is for the sticky footer */
 }
-
 .content {
     flex: 1 0 auto;                     /* sticky footer */
 }
@@ -119,6 +118,21 @@ a.title:visited:hover {
 /* a:active -- no change to above -- it will still not be underlined */
 /*********************************************/
 
+/****************************************/
+/* tweaking this for Rose, specifically */
+a.rose:link{
+    color: #35387a;             /* make these look identical to the other mini-header text and header texts */
+}
+a.rose:visited {
+    color: #35387a;             /* it will not change when visited */
+}
+a.rose:hover {
+    color: #546dd3;             /* but when you hover over it, it will become the same color as any other unvisited link! */
+}
+/* a:active -- no change to above -- it will still not be underlined */
+/*********************************************/
+
+
 
 /******************************************/
 /* code relative to the author card, here */
@@ -130,3 +144,20 @@ a.title:visited:hover {
 }
 /* end author-card specific code */
 /*********************************/
+
+/***************************/
+/* working on banner image */
+/* Container holding the image and the text */
+/*.img-container {
+    position: relative;
+    text-align: center;
+    color: white;
+}*/
+/* Centered text */
+/*.img-txt-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}*/
+/***************************/
